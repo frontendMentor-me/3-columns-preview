@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+    /* Fonts */
+    --fSize: 15px;
+    --fBigS: "Big Shoulders Display", cursive;
+    --fLexendD: "Lexend Deca", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: var(--veryLightGray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards .card {
+    height: 500px;
+    width: 300px;
+    padding: 40px;
+}
+
+.cards .card:nth-child(1) {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: var(--brightOrange);
+}
+
+.cards .card:nth-child(2) {
+    background-color: var(--darkCyan);
+}
+
+.cards .card:nth-child(3) {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: var(--veryDarkCyan);
+}
+
+.cards .card h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 25px 0;
+    font-size: 33px;
+    font-family: var(--fBigS);
+    color: var(--veryLightGray);
+}
+.cards .card p {
+    font-family: var(--fLexendD);
+    color: var(--transparentWhite);
+    line-height: 26px;
+    font-size: 14px;
+    padding: 0 25px 50px 0;
+}
+.cards .card button {
+    font-family: var(--fLexendD);
+    background-color: var(--veryLightGray);
+    border: none;
+    margin-top: 60px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    transition: 0.5s all;
+}
+
+.cards .card:nth-child(1) button {
+    color: var(--brightOrange);
+}
+.cards .card:nth-child(2) button {
+    color: var(--darkCyan);
+}
+.cards .card:nth-child(3) button {
+    color: var(--veryDarkCyan);
+}
+
+.cards .card button:hover {
+    cursor: pointer;
+    background: none;
+    border: 2px solid var(--veryLightGray);
+    color: var(--veryLightGray);
+}
+
+@media (max-width: 375px) {
+    .cards {
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+
+    .cards .card {
+        height: 420px;
+        width: 300px;
+        padding: 40px;
+    }
+    .cards .card:nth-child(1) {
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 7px;
+    }
+
+    .cards .card:nth-child(3) {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+    .cards .card h1 {
+        font-size: 36px;
+        padding: 20px 0;
+    }
+    .cards .card p {
+        padding: 0 5px 30px 0;
+    }
+    .cards .card button {
+        margin: 0;
+        font-size: 13px;
+        padding: 15px 30px;
+        border-radius: 25px;
+    }
+}
